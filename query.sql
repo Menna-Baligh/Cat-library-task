@@ -56,7 +56,7 @@ JOIN books ON borrowings.book_id = books.id
 JOIN members ON borrowings.member_id = members.id;
 
 --  Count how many books each member has borrowed
-SELECT count(member_id)as total , members.name FROM `borrowings`
+SELECT count(member_id)as total , members.name FROM borrowings
 join members
 on borrowings.member_id = members.id
 GROUP BY member_id;
